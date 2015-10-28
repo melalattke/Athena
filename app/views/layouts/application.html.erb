@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Athena2</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<img src="http://vignette1.wikia.nocookie.net/zelda/images/6/68/Batman_Logo.png/revision/latest?cb=20120910014401&path-prefix=es">
+<% if user_signed_in? %>
+	<%= link_to 'logout', destroy_user_session_test_path, :method => :delete %>
+<%end%>
+	<%= yield %>
+
+</body>
+</html>
