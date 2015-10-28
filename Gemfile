@@ -6,11 +6,8 @@ gem 'devise' #este sirve para crear usuarios
 gem 'rails', '4.1.8'
 # Use sqlite3 as the database for Active Record
 
-group :production do 
-	#gem 'thin'
-	gem 'rails_12factor' #required by heroku
-	gem 'pg'
-end
+gem 'rails_12factor', group: :production #required by heroku
+gem 'pg'
 
 group :development do
 	gem 'sqlite3'
